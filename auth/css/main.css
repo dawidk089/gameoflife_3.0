@@ -1,0 +1,69 @@
+/*globalne*/
+* {
+    box-sizing: border-box;
+}
+
+/*ogolne*/
+body{
+    color: #c8c8c8;
+    background: black;
+    min-width: 600px;
+}
+
+header{
+    text-align: center;
+}
+
+main{
+    display: table;
+    width: 100%;
+    position: relative;
+
+    padding-right: 50px;
+    margin: 50px;
+}
+
+main > *{
+    display: table-cell;
+    vertical-align: top;
+    width: 50%;
+}a {
+    text-decoration: none;
+}
+
+footer{
+    border-top: gray 1px solid;
+}
+
+/*formularze*/
+label select{
+    display: block;
+    width: 30%;
+}
+
+label input{
+    display: block;
+    width: 100px;
+}
+
+label {
+    padding: 10px;
+}
+
+.input_wrapping {
+    display: block;
+    width: 50%;
+}
+
+.input_wrapping > label{
+    display: inline-block;
+}
+
+input {
+    display: inline-block;
+}
+
+
+
+
+

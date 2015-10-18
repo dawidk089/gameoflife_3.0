@@ -1,0 +1,95 @@
+<aside>
+
+    <fieldset>
+        <legend>Parametry</legend>
+        <form>
+            <div class="input_wrapping" id="dimension_setting">
+                <h4>Ilość komórek:</h4>
+                <div id="size">
+                    <div class="box">
+                        <label for="horizontal_amount">poziomo</label>
+                        <!--<input id="horizontal_amount" type="number" name="horizontal_amount" value="47" min="20" max="800">-->
+                        <input id="horizontal_amount" type="number" name="horizontal_amount" value="20" min="20" max="800">
+                    </div>
+                    <div class="box">
+                        <label for="vertical_amount">pionowo</label>
+                        <!--<input id="vertical_amount" type="number" name="vertical_amount" value="20" min="10" max="600">-->
+                        <input id="vertical_amount" type="number" name="vertical_amount" value="10" min="10" max="600">
+                    </div>
+
+                </div>
+                <input type="button" name="set" value="Ustaw wymiary">
+            </div>
+            <div class="input_wrapping" id="mode">
+                <h4>Tryb gry:</h4>
+                <label>
+                    <select name="mode">
+                        <option value="0">zabawa</option>
+                        <option value="1">symulacje</option>
+                    </select>
+                </label>
+            </div>
+            <div class="input_wrapping" id="fun_control">
+                <h4>Sterowanie grą:</h4>
+                <label>
+                    <input type="range" name="frequency" value="10" min="0.5" max="20" step="0.1">
+                    <div id="scale">
+                        <div id="min_range"></div><div id="max_range"></div>
+                    </div>
+                </label>
+                <div class="buttons_row">
+                    <input type="button" name="start" value="Start">
+                    <input type="button" name="reset" value="Reset">
+                </div>
+                <div class="buttons_row">
+                    <input type="button" name="prev_step" value="Poprzedni krok">
+                    <input type="button" name="next_step" value="Następny krok">
+                    <input type="button" name="last" value="Ustaw na koniec">
+                </div>
+            </div>
+            <div class="input_wrapping" id="simulation_control">
+                <h4>Zarządzanie symulacjami</h4>
+                <div id="storage">
+                    <div id="buttons_row">
+                        <input type="button" name="init" value="Inicjuj bieżącą planszą">
+                        <input type="button" name="cancel" value="Przerwij">
+                    </div>
+                    <div id="buttons_row">
+                        <input type="button" name="start" value="Start">
+                        <input type="button" value="Nowa symulacja" name="new_sim">
+                    </div>
+                    <div class="buttons_row">
+                        <input type="button" value="Poprzednia" name="prev_sim">
+                        <input type="button" value="Następna" name="next_sim">
+                    </div>
+                    <div class="buttons_row">
+                        <input type="button" name="save" value="Zapisz">
+                        <input type="button" name="restore" value="Przywróć">
+                        <input type="button" name="delete" value="Usuń">
+                    </div>
+                    <div class="buttons_row" id=sim_save_state>
+                        <div id="diode">
+                            <canvas id="diode_canvas" width="50" height="50">
+                                <p>Twoja przeglądarka nie obsługuje canvas.</p>
+                            </canvas>
+                        </div>
+                        <p id="curr_sim">
+                            <span id="sim_no"></span>
+                            \
+                            <span id="sim_count"></span>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </fieldset>
+
+    <fieldset id="state">
+        <legend>Stan układu</legend>
+        <p>Efektywna szybkość: <span id="frequency"></span> fps</p>
+        <p>Ilość żywych komórek: <span id="lived_amount"></span></p>
+        <p>Stan układu: <span id="game_state"></span></p>
+        <p>Wiek układu: <span id="game_age"></span></p>
+    </fieldset>
+
+</aside>

@@ -1,0 +1,39 @@
+<section>
+    <h2>Opis aplikacji</h2>
+
+    <h3>Wstęp</h3>
+    <p>Tematem przewodnim aplikacji jest gra w życie - automat komórkowy wymyślony przez Johna Conwaya w 1970r. O samej
+        grze i jej regułach można przeczytać na <a href="https://pl.wikipedia.org/wiki/Gra_w_%C5%BCycie">wikipedii</a>.
+        Sama strona udostępnia kilka funkcjonalności, które pozwalają zbadać tą wciągającą grę. Symulator zawarty
+        na stronie głównej posiada dwa tryby - tryb zabawy i tryb symulacji, każdy ma inne możliwości. Obok
+        planszy gry, której wielkość można zmienić, po prawej stronie znajduje się panel kontrolny za pomocą, którego
+        można sterować symulatorem. Panel zmienia się w zależności od stanu gry. Pod panelem można znaleźć
+        informacje na temat aktualnego stanu gry. Witryna dostępna jest po założenia konta i udostępnia prywatna
+        listę symulacji zapisanych w bazie banych oraz możliwość przeprowadzania wielu symulacji na serwerze.</p>
+
+    <h3>Tryb zabawy</h3>
+    <p>Dostępne są tutaj takie opcje jak sterowanie szybkością gry czy przeglądanie poszczególnych kroków gry.
+        W każdej chwili można cofnać, zmodyfikować stan komórek na planszy i sprawdzić co się stanie. Ten tryb posiada
+        proste funkcje, ale charakteryzuje się elastycznością w stosunku do wpływu na stan planszy.</p>
+
+    <h3>Tryb symulacji</h3>
+    <p>Ten tryb posiada więcej opcji. Można ta wywoływać wiele symulacji, przeglądać ich efekty końcowe lub też wysłać
+        je na serwer, zapisać i oglądać na własnej liście symulacji. W tym trybie cały czas sprawdzany jest stan planszy
+        pod kątem ustalenia się stanu równowagi w grze. Są to trzy stany, w których ewolucja komórek może ustać, wtedy
+        układ jest stały i niezmienny, ewolucja może się zapetlić, wtedy struktura komórek powtarza się okresowo lub
+        stan gdy wszystkie komórki wymierają. Gdy gra osiągnie jeden z tych stanów symulator zatrzymuje się. Stan gry
+        jest na bieżąco wyświetlany pod panelem kontrolnym.</p>
+
+    <h3>Użyte funkcjonalności</h3>
+    <p>Serwis wykorzystuje możliwości html5 takie jak canvas, nowe tagi, nowe typy i atrybuty formularzy.
+        Korzysta także z funkcjonalności local storage dzięki, której symulacje są przechowywane lokalnie
+        i można do nich powrócić. W przypadku braku łączności lub błędów serwera, aplikacje w pierwszym możliwym czasie
+        ponawia nieudane wysyłanie symulacji. Cały serwis pracuje w konwencji restful</p>
+
+    <h3>Przewidziane-niedodane</h3>
+    <p>Serwis można uznać za wstępna wersję (pre-alfa) aplikacji. Do funkcjonalności nie dostarczono jeszcze
+        listy rekordów (czasu przetrwania symulacji), przeciągania znanych i zdefiniowanych struktur komórek
+        wprost na plansze, obliczanie rzeczywistej prędkości symulacji, wykresów wizualizujących przebieg symulacji - ilość
+        żywych komórek, histogram wieku komórek w każdym kroku oraz wiele innych ciekawych komponentów. </p>
+
+</section>

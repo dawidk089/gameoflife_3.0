@@ -1,0 +1,36 @@
+main{
+    display: table;
+    position: relative;
+    width: 100%;
+    table-layout: fixed;
+    padding: 15px;
+}
+
+main > * {
+    display: table-cell;
+    position: relative;
+    vertical-align: top;
+}
+
+.game_canvas {
+    max-width: 75%;
+}
+
+.row{
+    display: table;
+    position: relative;
+    width: 100%;
+    table-layout: fixed;
+    padding: 15px;
+}
+
+.row > .item{
+    display: table-cell;
+    position: relative;
+    vertical-align: top;
+}
+
+
+.counter{
+    width: 30px;
+}

@@ -1,0 +1,18 @@
+<section id="login">
+    <h3>Logowanie</h3>
+    <form action="<?=appl_path::$appl_path?>Auth/login" method="post">
+        <div class="input_wrapping">
+            <label>
+                nick
+                <input type="text" name="nick" required>
+            </label>
+        </div>
+        <div class="input_wrapping">
+        <label>
+            hasło
+            <input type="password" name="password" required>
+        </label>
+        </div>
+        <input type="submit" name="login" value="Loguj">
+    </form>
+</section>

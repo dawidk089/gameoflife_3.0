@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <meta charset="utf-8"/>
+    <meta name="application-name" content="a simple web application using templates, can be offline and database"/>
+    <meta name="description" content="cellular automaton, the game of life with ability to record your own simulation"/>
+    <meta name="keywords" content="phtml, templates, database, offline, registration, TI, gr. czwartkowa"/>
+    <meta name="author" content="Dawid Karminski"/>
+
+
+    <title><?=$title?></title>
+
+    <?php foreach ($csss as $css): ?>
+        <link href="<?=appl_path::$appl_path.$css?>" rel="stylesheet" />
+    <?php endforeach; ?>
+
+</head>
+
+<body>
+<!-- HEADER -->
+<header>
+    <h1>Gra w życie</h1>
+    <h2>Automat komórkowy</h2>
+</header>
+
+<!-- NAV -->
+<nav>
+    <ul>
+        <li><a href="<?=appl_path::$appl_path?>Main">Strona główna</a></li>
+        <li><a href="<?=appl_path::$appl_path?>SimList/simulations">Lista symulacji</a></li>
+        <!--<li><a href="<?/*=appl_path::$appl_path*/?>SimList/records">Lista rekordów</a></li>-->
+<!--        <li><a href="<?=appl_path::$appl_path?>About">O stronie</a></li>-->
+        <li><a href="<?=appl_path::$appl_path?>Auth/logout">Wyloguj</a></li>
+    </ul>
+</nav>
+
+<!-- MAIN -->
+<main>

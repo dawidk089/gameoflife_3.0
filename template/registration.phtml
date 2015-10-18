@@ -1,0 +1,35 @@
+<section id="registration">
+    <?php foreach ($jss as $js): ?>
+        <script src="<?=appl_path::$appl_path.$js?>" ></script>
+    <?php endforeach; ?>
+    <h3>Rejestracja</h3>
+    <form action="<?=appl_path::$appl_path?>Auth/register" method="post">
+        <div class="input_wrapping">
+            <label>
+                adres e-mail
+                <input type="email" name="email" required>
+            </label>
+            <label>
+                powtórz adres e-mail
+                <input type="email" name="email_repeat" required>
+            </label>
+        </div>
+        <div class="input_wrapping">
+            <label>
+                nick
+                <input type="text" name="nick" required>
+            </label>
+        </div>
+        <div class="input_wrapping">
+            <label>
+                hasło
+                <input type="password" name="password" required>
+            </label>
+            <label>
+                powtórz hasło
+                <input type="password" name="password_repeat" required>
+            </label>
+        </div>
+        <input type="submit" name="registration-name" value="Rejestruj">
+    </form>
+</section>

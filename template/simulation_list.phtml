@@ -1,0 +1,74 @@
+<section>
+    <?php foreach ($jss as $js): ?>
+        <script src="<?=appl_path::$appl_path.$js?>"></script>
+    <?php endforeach; ?>
+    <h3>Lista rekordów</h3>
+    <div id="scrolling_area">
+        <div class="row">
+            <div class="item counter">Lp.</div>
+            <div class="item">Warunki początkowe</div>
+            <div class="item">Efekt końcowe</div>
+            <div class="item">Szczegóły</div>
+        </div>
+        <?php $i=1; foreach ($simulations as $simulation): ?>
+            <?php
+                $horizontal = count($simulation['data'][0]);
+                $vertical = count($simulation['data'][0][0]);
+            ?>
+            <div class="row">
+                <div class="item counter"><?=$i."."?></div>
+                <div id="beginning<?=$i?>" class="game_canvas item">
+                    <script>
+                        var board = new Board(<?=$horizontal?>, <?=$vertical?>, 1, 10);
+                        board.init_canvas("canvas<?=$i?>beg", "beginning<?=$i?>");
+                        <?php for($j=0; $j<$horizontal; ++$j): ?>
+                            <?php for($k=0; $k<$vertical; ++$k): ?>
+                                board.draw_cell(
+                                    (<?=$j?>*2+1)*(board.cell_radius+board.cell_padding),
+                                    (<?=$k?>*2+1)*(board.cell_radius+board.cell_padding),
+                                    <?=($simulation['data'][0][$j][$k]?1:0)?>
+                                );
+                            <?php endfor; ?>
+                        <?php endfor; ?>
+                    </script>
+                </div>
+                <div id="end<?=$i?>" class="game_canvas item">
+                    <script>
+                        var board = new Board(<?=$horizontal?>, <?=$vertical?>, 1, 10);
+                        board.init_canvas("canvas<?=$i?>end", "end<?=$i?>");
+                        <?php $last = count($simulation['data'])-1; ?>
+                        <?php for($j=0; $j<$horizontal; ++$j): ?>
+                            <?php for($k=0; $k<$vertical; ++$k): ?>
+                                board.draw_cell(
+                                    (<?=$j?>*2+1)*(board.cell_radius+board.cell_padding),
+                                    (<?=$k?>*2+1)*(board.cell_radius+board.cell_padding),
+                                    <?=($simulation['data'][$last][$j][$k]?1:0)?>
+                                );
+                            <?php endfor; ?>
+                        <?php endfor; ?>
+                    </script>
+                </div>
+                <div class="item">
+                    <p>Czas życia: <span><?=count($simulation['data'])?></span></p>
+                    <p>Wymiary:
+                        <ul>
+                            <li>poziomo: <span><?=$horizontal?></span></li>
+                            <li>pionowo: <span><?=$vertical?></span></li>
+                        </ul>
+                    </p>
+                    <p>Status: <span><?=$simulation['status']?></span></p>
+                    <?php if($type === 'record'):?>
+                        <p>Nick: <span><?=$simulation['user']?></span></p>
+                    <?php endif ?>
+                        <input type="button" value="Usuń" name="delete">
+                    <!--TODO jak pobrac dane z pola hidden-->
+                        <input type="hidden" name="id" value="<?=$i?>">
+                </div>
+            </div>
+        <?php ++$i; endforeach; ?>
+    </div>
+</section>
+<aside>
+    <div id="grpah">
+    </div>
+</aside>

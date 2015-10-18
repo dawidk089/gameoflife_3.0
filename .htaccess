@@ -1,0 +1,15 @@
+RewriteEngine On
+RewriteBase /gameoflife
+#sciezka do katalogu glownego projektu
+#w apache2.conf:
+#<Directory /var/www/>
+#...
+#AllowOverride All
+#...
+RewriteCond %{REQUEST_FILENAME} -s [OR]
+RewriteCond %{REQUEST_FILENAME} -l [OR]
+RewriteCond %{REQUEST_FILENAME} -d
+RewriteRule ^.*$ - [NC,L]
+
+#RewriteRule ^.{0}$ Main [NC]
+RewriteRule ^(.*) index.php [NC,L]

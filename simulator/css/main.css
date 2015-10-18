@@ -1,0 +1,172 @@
+/* ogolne */
+
+main{
+    display: table;
+    position: relative;
+    width: 100%;
+    table-layout: fixed;
+    padding: 15px;
+}
+
+main > * {
+    display: table-cell;
+    position: relative;
+    vertical-align: top;
+}
+
+/* panel kontrolny */
+
+aside {
+    width: 25%;
+    padding-left: 15px;
+}
+
+aside fieldset {
+    margin: 15px 0;
+    padding: 0;
+    border: dashed 1px #f90;
+}
+
+
+#size *{
+    width: 100px;
+}
+
+
+#size .box{
+    display: inline-block;
+}
+
+
+
+#game_canvas {
+    max-width: 100%;
+}
+
+.input_wrapping {
+    border-bottom: dashed 1px #f90;
+}
+
+.input_wrapping:last-of-type {
+    border-bottom: none;
+}
+
+
+h1 {
+    color: #f90;
+    font-weight: normal;
+}
+
+h2 {
+    color: #999;
+    font-weight: normal;
+    text-transform: uppercase;
+}
+
+a {
+    color: #f90;
+}
+
+a:hover {
+    color: #ff0;
+}
+
+input {
+    border: solid 1px #f90;
+    background: black;
+    color: #fff;
+    padding: 5px;
+    border-radius: 5px;
+    margin: 15px 0 0 15px;
+}
+
+input:last-of-type {
+    margin-bottom: 15px;
+}
+
+input[type=button],
+input[type=submit] {
+    cursor: pointer;
+}
+
+input[type=button]:hover,
+input[type=submit]:hover {
+    background: #222;
+}
+
+input[type=range] {
+    /*border: none;*/
+    margin: 5px auto 5px auto;
+    width: 100%;
+}
+
+#min_range{
+    float:left;
+}
+
+#max_range{
+    float:right;
+}
+
+#scale{
+    margin-bottom: 30px;
+}
+
+
+#storage > *{
+    display: block;
+}
+
+#diode_canvas{
+    max-width: 100%;
+}
+
+/*#curr_sim{
+    alignment-adjust: central;
+}*/
+
+input[name=save]{
+    float: left;
+}
+
+.buttons_row *{
+    display: inline;
+}
+
+
+label {
+    display: block;
+    margin: 15px;
+    text-transform: uppercase;
+}
+
+label input {
+    display: block;
+    margin: 0;
+}
+
+label input:last-of-type {
+    margin-bottom: 0;
+}
+
+form {
+    margin: 0;
+    padding: 0;
+}
+
+legend {
+    position: relative;
+    left: 15px;
+    font-weight: bold;
+}
+
+*:disabled {
+    border-color: #333;
+    color: #666;
+}
+
+#diode,
+#curr_sim {
+    display: inline-block;
+    vertical-align: middle;
+}
